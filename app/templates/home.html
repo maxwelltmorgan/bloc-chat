@@ -1,1 +1,13 @@
-<h1>Home Page</h1>
+<section id="page">
+    <header>
+      <h1>Bloc Chat</h1>
+    </header>
+    <nav>
+      <h2>Chat Rooms</h2>
+          <p ng-repeat="room in home.chatrooms">
+              {{ room.$value }}
+          </p>
+    </nav>
+    <main>Main area</main>
+    <footer>Footer</footer>
+</section>
