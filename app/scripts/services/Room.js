@@ -6,6 +6,13 @@
 
     Room.all = rooms;
 
+    Room.add = function(room) {
+        rooms.$add({ $value: room }).then(function(ref) {
+          var id = ref.key;
+          console.log("added record with id " + id);
+        });
+    }
+
     return Room;
   }
 

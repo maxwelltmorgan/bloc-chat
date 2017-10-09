@@ -10,19 +10,22 @@ body {
   grid-template: [header-left] "head head" 100px [header-right]
                  [main-left]   "nav  main" 1fr  [main-right]
                  [footer-left] "nav  foot" 60px [footer-right]
-                 / 200px 1fr;
+                 / 250px 1fr;
 }
 
 header {
-  background-color: darkgrey;
-  color: #555;
+  background-color: #557A95;
+  color: white;
   grid-area: head;
 }
 
 header h1 {
   padding: 10px;
-  font-size: 200%;
+  font-size: 300%;
+  font-family: 'Patrick Hand SC', cursive;
+  text-transform: uppercase;
   vertical-align: middle;
+  text-align: center;
 }
 
 nav {
@@ -33,12 +36,22 @@ nav {
 
 nav h2 {
   padding: 10px;
-  font-size: 150%;
-  color: #555;
+  font-size: 200%;
+  font-family: 'Patrick Hand SC', cursive;
+  color: #557A95;
 }
 
 nav p {
-  padding: 0 10px 0 10px;
+  padding: 0 10px 0 20px;
+  color: #557A95;
+}
+
+#newBtn {
+  background-color: #7395AE;
+  color: white;
+  border-style: none;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 main {
@@ -47,7 +60,29 @@ main {
 }
 
 footer {
-  background-color: black;
+  background-color: #B1A296;
   color: white;
   grid-column: foot;
 }
+
+.modal-header {
+  background-color: lightgrey;
+  color: #557A95;
+  border-radius: 5px;
+  font-family: 'Patrick Hand SC', cursive;
+}
+
+.inputBox {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+#cancelBtn {
+  background-color: #B1A296;
+  border-style: none;
+}
+/*dark grey #5D5C61
+/*light grey
+/*light blue #7395AE
+/*dark blue #557A95
+/*brownish #B1A296

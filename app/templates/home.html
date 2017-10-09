@@ -4,6 +4,7 @@
     </header>
     <nav>
       <h2>Chat Rooms</h2>
+          <a class="btn btn-default push" id="newBtn" ng-click="home.open('sm')">+ New Room</a>
           <p ng-repeat="room in home.chatrooms">
               {{ room.$value }}
           </p>
