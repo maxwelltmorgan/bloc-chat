@@ -6,9 +6,19 @@
       <h2>Chat Rooms</h2>
           <a class="btn btn-default push" id="newBtn" ng-click="home.open('sm')">+ New Room</a>
           <p ng-repeat="room in home.chatrooms">
-              {{ room.$value }}
+              <a class="room-name" ng-click="home.currentRoom(room)">{{ room.$value }}</a>
           </p>
     </nav>
-    <main>Main area</main>
+    <main>
+      <div class="room-messages-header">
+          <h2> {{ home.currentRoomName }} </h2>
+          <div class="messages-container">
+              <div class="message-item" ng-repeat="message in home.messages">
+              <p class="message-username">Username: {{ message.username }}<span class="message-sentAt">Time Sent: {{ message.sentAt }}</span></p>
+
+              <p class="message-content">Message: {{ message.content }}</p>
+              </div>
+          </div>
+    </main>
     <footer>Footer</footer>
 </section>

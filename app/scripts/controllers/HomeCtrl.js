@@ -1,8 +1,25 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, $log) {
+    function HomeCtrl(Room, $uibModal, $log, Message) {
       this.chatrooms = Room.all;
-      this.animationsEnabled = true;
       this.items = ['item1', 'item2', 'item3'];
+
+
+
+      this.currentRoom = function(room) {
+          console.log(room.$value);
+          console.log(room.$id);
+          console.log(room.$content);
+          console.log(room.$username);
+          console.log(room.$sentAt);
+          var currentRoom = room;
+          this.currentRoomName = currentRoom.$value;
+          this.messages = Message.getByRoomId(currentRoom.$id);
+
+      };
+
+      this.animationsEnabled = true;
+
+
       this.open = function (size) {
           var modalInstance = $uibModal.open({
               animation: this.animationsEnabled,
@@ -33,5 +50,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', '$log', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', '$log', 'Message', HomeCtrl]);
 })();
