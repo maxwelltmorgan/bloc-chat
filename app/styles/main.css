@@ -6,7 +6,7 @@ body {
   display: grid;
   width: 100%;
   max-width: 1020px;
-  height: 800px;
+  height: 1000px;
   grid-template: [header-left] "head head" 100px [header-right]
                  [main-left]   "nav  main" 1fr  [main-right]
                  [footer-left] "nav  foot" 60px [footer-right]
@@ -60,7 +60,7 @@ main {
 }
 
 main h2 {
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
   font-size: 200%;
   font-family: 'Patrick Hand SC', cursive;
   color: #B1A296;
@@ -88,8 +88,41 @@ footer {
   background-color: #B1A296;
   border-style: none;
 }
+
 /*dark grey #5D5C61
-/*light grey
-/*light blue #7395AE
-/*dark blue #557A95
-/*brownish #B1A296
+light grey
+light blue #7395AE
+dark blue #557A95
+brownish #B1A296
+*/
+
+.message-border {
+  border-top: 1px solid lightgrey;
+}
+
+.message-left {
+  display: inline-block;
+}
+
+.message-username {
+  padding: 10px 20px 0px 20px;
+  color: darkgrey;
+  font-size: 90%;
+}
+
+.message-content {
+  padding: 0px 20px 10px 20px;
+}
+
+.message-sentAt {
+  float: right;
+  vertical-align: top;
+  padding: 10px 20px 0px 20px;
+  font-style: italic;
+  color: darkgrey;
+  font-size: 80%;
+}
+
+.message-item:nth-child(odd){
+  background: #F0F8FF;
+}

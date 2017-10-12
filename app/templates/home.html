@@ -14,9 +14,13 @@
           <h2> {{ home.currentRoomName }} </h2>
           <div class="messages-container">
               <div class="message-item" ng-repeat="message in home.messages">
-              <p class="message-username">Username: {{ message.username }}<span class="message-sentAt">Time Sent: {{ message.sentAt }}</span></p>
-
-              <p class="message-content">Message: {{ message.content }}</p>
+              <div class="message-border">
+              <div class="message-left">
+              <p class="message-username">{{ message.username }}</p>
+              <p class="message-content">{{ message.content }}</p>
+              </div>
+              <p class="message-sentAt">{{ message.sentAt }}</p>
+              </div>
               </div>
           </div>
     </main>
