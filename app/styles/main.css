@@ -5,7 +5,7 @@ body {
 #page {
   display: grid;
   width: 100%;
-  max-width: 1020px;
+
   height: 1000px;
   grid-template: [header-left] "head head" 100px [header-right]
                  [main-left]   "nav  main" 1fr  [main-right]
@@ -125,4 +125,19 @@ brownish #B1A296
 
 .message-item:nth-child(odd){
   background: #F0F8FF;
+}
+
+.username-Modal {
+  padding: 0 10px 10px 10px;
+}
+
+.modal-header {
+  background-color: #B1A296;
+  color: white;
+}
+
+.username-input {
+  height: 35px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
 }

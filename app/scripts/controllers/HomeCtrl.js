@@ -8,7 +8,7 @@
       this.currentRoom = function(room) {
           console.log(room.$value);
           console.log(room.$id);
-        
+
           var currentRoom = room;
           this.currentRoomName = currentRoom.$value;
           this.messages = Message.getByRoomId(currentRoom.$id);
