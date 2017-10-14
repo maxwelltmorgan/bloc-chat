@@ -5,7 +5,9 @@ body {
 #page {
   display: grid;
   width: 100%;
-
+  background-image: url("/assets/blocChatBackground.jpg");
+  background-size: cover;
+  opacity: .8;
   height: 1000px;
   grid-template: [header-left] "head head" 100px [header-right]
                  [main-left]   "nav  main" 1fr  [main-right]
@@ -17,6 +19,7 @@ header {
   background-color: #557A95;
   color: white;
   grid-area: head;
+  margin: 0 50px 0 50px;
 }
 
 header h1 {
@@ -28,10 +31,18 @@ header h1 {
   text-align: center;
 }
 
+img {
+  height: 100%;
+  padding: 15px;
+  float: right;
+}
+
 nav {
   background-color: lightgrey;
+  opacity: .8;
   color: darkgrey;
   grid-area: nav;
+  margin-left: 50px;
 }
 
 nav h2 {
@@ -57,6 +68,7 @@ nav p {
 main {
   background-color: white;
   grid-area: main;
+  margin-right: 50px;
 }
 
 main h2 {
@@ -70,6 +82,7 @@ footer {
   background-color: #B1A296;
   color: white;
   grid-column: foot;
+  margin-right: 50px;
 }
 
 .modal-header {

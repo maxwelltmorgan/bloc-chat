@@ -2,7 +2,7 @@
   function BlocChatCookies($cookies, $uibModal) {
     var currentUser = $cookies.get('blocChatCurrentUser');
     console.log(currentUser);
-    if (!currentUser || currentUser === '') {     // if there is no current user value or current user is empty value
+    if (!currentUser || currentUser === '') {
       this.userModalInstance = $uibModal.open({
                 ariaLabelledBy: 'modal-title',
                 ariaDescribedBy: 'modal-body',

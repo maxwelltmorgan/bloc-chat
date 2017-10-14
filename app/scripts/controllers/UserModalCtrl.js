@@ -5,8 +5,8 @@
             if (this.username && this.username !== '') {
         $cookies.put('blocChatCurrentUser', this.username);
         userModalInstance.close();
-        //$uibModal.close(); this line will not work, must be wrapped with modalInstance
-        console.log('You created new username ' + this.username);
+
+        console.log('New username: ' + this.username);
       } else {
           alert('You must enter a valid username.')
       }
