@@ -5,9 +5,8 @@ body {
 #page {
   display: grid;
   width: 100%;
-  background-image: url("/assets/blocChatBackground.jpg");
+  background-image: url("/assets/discussionBackground.jpg");
   background-size: cover;
-  opacity: .8;
   height: 1000px;
   grid-template: [header-left] "head head" 100px [header-right]
                  [main-left]   "nav  main" 1fr  [main-right]
@@ -39,7 +38,6 @@ img {
 
 nav {
   background-color: lightgrey;
-  opacity: .8;
   color: darkgrey;
   grid-area: nav;
   margin-left: 50px;

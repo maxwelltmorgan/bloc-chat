@@ -24,6 +24,13 @@
               </div>
               </div>
           </div>
+
+          <div class="message-send">
+              <form name="add-message">
+                  <input type="text" class="form-control" ng-model="home.newMessage" placeholder="Write a message" size="130">
+                  <button type="submit" class="btn btn-default" ng-click="home.sendMessage()">Send Message</button>
+              </form>
+          </div>
     </main>
     <footer>Footer</footer>
 </section>

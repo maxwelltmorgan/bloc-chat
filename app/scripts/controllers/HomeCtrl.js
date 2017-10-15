@@ -1,5 +1,5 @@
 (function() {
-    function HomeCtrl(Room, $uibModal, $log, Message) {
+    function HomeCtrl(Room, $uibModal, $log, Message, $cookies) {
       this.chatrooms = Room.all;
       this.items = ['item1', 'item2', 'item3'];
 
@@ -13,6 +13,19 @@
           this.currentRoomName = currentRoom.$value;
           this.messages = Message.getByRoomId(currentRoom.$id);
 
+      };
+
+      this.sendMessage = function() {     // sets send method of sending messages to firebase
+          //console.log(this);
+          var date = new Date();
+          Message.add({
+            roomId: this.currentRoom.$id,
+            username: $cookies.get('blocChatCurrentUser'),
+            sentAt: firebase.database.ServerValue.TIMESTAMP,
+            content: this.newMessage
+          });
+          //console.log(Message);
+          //this.newMessage = "";
       };
 
       this.animationsEnabled = true;
@@ -48,5 +61,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Room', '$uibModal', '$log', 'Message', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$uibModal', '$log', 'Message', '$cookies', HomeCtrl]);
 })();
