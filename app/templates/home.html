@@ -1,13 +1,12 @@
 <section id="page">
     <header>
-      <img src="assets/messagingicon.png">
       <h1>Bloc Chat</h1>
     </header>
     <nav>
       <h2>Chat Rooms</h2>
           <a class="btn btn-default push" id="newBtn" ng-click="home.open('sm')">+ New Room</a>
           <p ng-repeat="room in home.chatrooms">
-              <a class="room-name" ng-click="home.currentRoom(room)">{{ room.$value }}</a>
+              <a class="room-name" ng-click="home.openRoom(room)">{{ room.$value }}</a>
           </p>
     </nav>
     <main>
@@ -20,7 +19,7 @@
               <p class="message-username">{{ message.username }}</p>
               <p class="message-content">{{ message.content }}</p>
               </div>
-              <p class="message-sentAt">{{ message.sentAt }}</p>
+              <p class="message-sentAt">{{ message.sentAt | date : "shortTime" }}</p>
               </div>
               </div>
           </div>

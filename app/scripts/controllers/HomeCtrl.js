@@ -1,31 +1,34 @@
 (function() {
     function HomeCtrl(Room, $uibModal, $log, Message, $cookies) {
+
+      var currentUser = $cookies.get('blocChatCurrentUser');
+      console.log(currentUser);
       this.chatrooms = Room.all;
       this.items = ['item1', 'item2', 'item3'];
 
 
 
-      this.currentRoom = function(room) {
-          console.log(room.$value);
-          console.log(room.$id);
+      this.openRoom = function(room) {
 
-          var currentRoom = room;
-          this.currentRoomName = currentRoom.$value;
-          this.messages = Message.getByRoomId(currentRoom.$id);
+
+          this.currentRoom = room;
+          this.currentRoomName = room.$value;
+          this.messages = Message.getByRoomId(room.$id);
 
       };
 
       this.sendMessage = function() {     // sets send method of sending messages to firebase
           //console.log(this);
           var date = new Date();
+
           Message.add({
             roomId: this.currentRoom.$id,
-            username: $cookies.get('blocChatCurrentUser'),
+            username: currentUser,
             sentAt: firebase.database.ServerValue.TIMESTAMP,
             content: this.newMessage
           });
-          //console.log(Message);
-          //this.newMessage = "";
+
+          this.newMessage = null;
       };
 
       this.animationsEnabled = true;
