@@ -1,9 +1,9 @@
 (function() {
     function HomeCtrl(Room, $uibModal, $log, Message, $cookies) {
-
       var currentUser = $cookies.get('blocChatCurrentUser');
       console.log(currentUser);
       this.chatrooms = Room.all;
+      this.currentRoom = null;
       this.items = ['item1', 'item2', 'item3'];
 
 
