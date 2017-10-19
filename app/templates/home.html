@@ -1,6 +1,6 @@
 <section id="page">
     <header>
-      <h1>Bloc Chat</h1>
+      <a href="#" class="blocChatLogo" title="logo"><img src="assets/blocChat.png" class="blocChatImg"></a>
     </header>
     <nav>
       <h2>Chat Rooms</h2>
@@ -12,8 +12,8 @@
     <main>
       <div class="intro" ng-show="home.currentRoom === null">
         <h3 class="welcome-header"> Welcome to Bloc Chat!</h3>
-        <p class="welcome-p">Please select a room to join on-going conversations</p>
-        <p class="welcome-p2">Don't see what you're searching for?  Feel free to create a new room!</p>
+        <p class="welcome-p">Select a room to join any ongoing conversation.</p>
+        <p class="welcome-p2">New discussion topic?  Feel free to create a room!</p>
       </div>
       <div class="room-messages-header">
           <h2 ng-show="home.currentRoom !== null">{{ home.currentRoomName }}</h2>
@@ -39,6 +39,6 @@
           </div>
     </main>
     <footer>
-      <img class="footer-img" src="assets/Send_mail.png" alt="Share your ideas!">
+
     </footer>
 </section>

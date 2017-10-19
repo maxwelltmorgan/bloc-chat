@@ -7,7 +7,7 @@ body {
   display: grid;
   width: 100%;
   min-height: 100vh;
-  grid-template: [header-left] "head head" 100px [header-right]
+  grid-template: [header-left] "head head" 120px [header-right]
                  [main-left]   "nav  main" 1fr  [main-right]
                  [footer-left] "nav  foot" 60px [footer-right]
                  / 250px 1fr;
@@ -17,6 +17,18 @@ header {
   background: linear-gradient(to bottom, #252d42 22%, #000 98%) #222b3b;
   color: white;
   grid-area: head;
+  width: 100%;
+  text-align: left;
+}
+
+.blocChatLogo {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.blocChatImg {
+  height: 128px;
+  padding: 15px;
 }
 
 .welcome-header {
@@ -37,21 +49,6 @@ header {
   color: #33adff;
 }
 
-header h1 {
-  padding: 10px;
-  font-size: 300%;
-  font-family: 'Patrick Hand SC', cursive;
-  text-transform: uppercase;
-  vertical-align: middle;
-  text-align: center;
-}
-
-img {
-  height: 100%;
-  padding: 15px;
-  float: right;
-}
-
 nav {
   background: linear-gradient(to bottom, #252d42, #1d1f26) #222b3b;
   color: darkgrey;
@@ -61,10 +58,8 @@ nav {
 
 nav h2 {
   padding: 10px;
-  font-size: 200%;
-  font-family: 'Patrick Hand SC', cursive;
+  font-size: 150%;
   color: #7c8289;
-  text-transform: uppercase;
 }
 
 nav p {
@@ -74,7 +69,6 @@ nav p {
 
 .room-name {
   color: white;
-  font-family: calibri, helvetica, sans-serif;
   font-size: 110%;
 }
 
@@ -115,7 +109,6 @@ footer {
   background-color: lightgrey;
   color: #557A95;
   border-radius: 5px;
-  font-family: 'Patrick Hand SC', cursive;
 }
 
 .inputBox {
@@ -192,10 +185,4 @@ brownish #B1A296
   border-radius: 1px;
   background-color: #36454F;
   color: white;
-}
-
-.footer-img {
-  height: 125%;
-  float: right;
-  padding: 10px;
 }
